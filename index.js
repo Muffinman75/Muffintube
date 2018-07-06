@@ -13,7 +13,7 @@ function getDataFromApi(inputText, callback) {
 		data: { 
 			part: 'snippet',
 			q: inputText,
-		    // maxResults: 4,
+		    maxResults: 4,
 			key: 'AIzaSyAw1hPcxvy1hwfZ8fTP-zOHaPzxVuqKFDI',
 			type: 'video'
 		},
@@ -36,11 +36,11 @@ function renderSearchResults(item) {
 	incrementResultNumber();
 	return`
 		<h4>Search result ${resultNumber}</h4> 
-		<a href="https://www.youtube.com/watch?v=${item.id.videoId}"><img src=${item.snippet.thumbnails.default.url}>Small Image</a>
+		<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank"><img src=${item.snippet.thumbnails.default.url}>Small Image</a>
 		<h4>Search result ${resultNumber}</h4>
-		<a href="https://www.youtube.com/watch?v=${item.id.videoId}"><img src=${item.snippet.thumbnails.medium.url}>Medium Image</a>
+		<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank"><img src=${item.snippet.thumbnails.medium.url}>Medium Image</a>
 		<h4>Search result ${resultNumber}</h4>
-		<a href="https://www.youtube.com/watch?v=${item.id.videoId}"><img src=${item.snippet.thumbnails.high.url}>Large Image</a>
+		<a href="https://www.youtube.com/watch?v=${item.id.videoId}" target="_blank"><img src=${item.snippet.thumbnails.high.url}>Large Image</a>
 		`; 
 }
 
