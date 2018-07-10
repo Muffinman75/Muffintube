@@ -13,14 +13,14 @@
 	<main role="main" class="js-search-page">
 	  <h1>Search for Videos on ThinkfulTube</h1>
 	  	<form>
-	  		<label for="video-search" ></label>
+	  		<label for="video-search" aria-label="string"></label>
 	  		<input id="video-search" type="text" required>
 	  		<button type="submit">Search</button>
 	  	</form>
 
-	  <div class="js-results-page">
+	  <div aria-live="assertive" class="js-results-page" hidden>
 	   
-		</div>
+	  </div>
 		
 	</main>
 	<script src="index.js" type="text/javascript"></script>
